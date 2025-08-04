@@ -60,50 +60,64 @@ function page({ params: paramsPromise }) {
             height={720}
             alt=""
           />
-          {/* <h1 className="my-8 text-[26px] font-semibold">Introduction</h1> */}
-          
-          <div className="blog-content" dangerouslySetInnerHTML={{__html:data.description}}></div>
 
-          {/* <h3 className="my-5 text-[18px] font-semibold">
-            Step 1: Goal setting and belief systems
-          </h3>
-          <p className="my-3">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate,
-            aperiam. Aspernatur aperiam modi quis, sint id accusantium fuga
-          </p>
-          <p className="my-3">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam,
-            voluptatum. Repellendus, deserunt. Quibusdam, officiis. Quo, vol.
-          </p>
-          <h3 className="my-5 text-[18px] font-semibold">
-            Step 2: Goal setting and belief systems
-          </h3>
-          <p className="my-3">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate,
-            aperiam. Aspernatur aperiam modi quis, sint id accusantium fuga
-          </p>
-          <p className="my-3">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam,
-            voluptatum. Repellendus, deserunt. Quibusdam, officiis. Quo, vol.
-          </p>
-          <h3 className="my-5 text-[18px] font-semibold">
-            Step 3: Goal setting and belief systems
-          </h3>
-          <p className="my-3">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate,
-            aperiam. Aspernatur aperiam modi quis, sint id accusantium fuga
-          </p>
-          <p className="my-3">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam,
-            voluptatum. Repellendus, deserunt. Quibusdam, officiis. Quo, vol.
-          </p>
-          <h3 className="my-5 text-[18px] font-semibold">Conclusion</h3>
-          <p className="my-3">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate,
-            aperiam. Aspernatur aperiam modi quis, sint id accusantium fuga
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam,
-            voluptatum. Repellendus, deserunt. Quibusdam, officiis. Quo, vol.
-          </p> */}
+          {data.description.length > 180 ? (
+            <div
+              className="blog-content"
+              dangerouslySetInnerHTML={{ __html: data.description }}
+            ></div>
+          ) : (
+            <>
+              <h1 className="my-8 text-[26px] font-semibold">Introduction</h1>
+              <h3 className="my-5 text-[18px] font-semibold">
+                Step 1: Goal setting and belief systems
+              </h3>
+              <p className="my-3">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Cupiditate, aperiam. Aspernatur aperiam modi quis, sint id
+                accusantium fuga
+              </p>
+              <p className="my-3">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Quisquam, voluptatum. Repellendus, deserunt. Quibusdam,
+                officiis. Quo, vol.
+              </p>
+              <h3 className="my-5 text-[18px] font-semibold">
+                Step 2: Goal setting and belief systems
+              </h3>
+              <p className="my-3">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Cupiditate, aperiam. Aspernatur aperiam modi quis, sint id
+                accusantium fuga
+              </p>
+              <p className="my-3">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Quisquam, voluptatum. Repellendus, deserunt. Quibusdam,
+                officiis. Quo, vol.
+              </p>
+              <h3 className="my-5 text-[18px] font-semibold">
+                Step 3: Goal setting and belief systems
+              </h3>
+              <p className="my-3">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Cupiditate, aperiam. Aspernatur aperiam modi quis, sint id
+                accusantium fuga
+              </p>
+              <p className="my-3">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Quisquam, voluptatum. Repellendus, deserunt. Quibusdam,
+                officiis. Quo, vol.
+              </p>
+              <h3 className="my-5 text-[18px] font-semibold">Conclusion</h3>
+              <p className="my-3">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Cupiditate, aperiam. Aspernatur aperiam modi quis, sint id
+                accusantium fuga Lorem ipsum dolor sit amet consectetur
+                adipisicing elit. Quisquam, voluptatum. Repellendus, deserunt.
+                Quibusdam, officiis. Quo, vol.
+              </p>
+            </>
+          )}
           <div className="my-24">
             <p className="text-black font font-semibold my-4">
               Share this article on social media:
